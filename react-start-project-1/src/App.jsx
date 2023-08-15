@@ -9,7 +9,7 @@ import co2Bg from './images/Bg-Tile-Maroon.png'
 import co2Spacer from './images/Spacer-01.png'
 
 import climateImg from './images/Icon-Climate.png'
-import climateBg from './images/Bg-Tile-Blue-Light.png'
+import climateBg from './images/Bg-Tile-Blue-Dark.png'
 import climateSpacer from './images/Spacer-02.png'
 
 import checklistImg from './images/Icon-Checklist.png'
@@ -81,6 +81,12 @@ const arrangementSection = {
   bgColor: arrangementBg
 }
 
+const allSections = [
+  co2Section,
+  climateSection,
+  checklistSection,
+  arrangementSection
+]
 
 function App() {
 
@@ -89,10 +95,11 @@ function App() {
       <Header />
       <Navbar />
       <Quote />
-      <Section sectionInformation={co2Section} />
-      <Section sectionInformation={climateSection}/>
-      <Section sectionInformation={checklistSection}/>
-      <Section sectionInformation={arrangementSection}/>
+      {allSections.map((section, index) => {
+        return (
+          <Section sectionInformation={section} key={index} />
+        )
+      })}
     </>
   )
 

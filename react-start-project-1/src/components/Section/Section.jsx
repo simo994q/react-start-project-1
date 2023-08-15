@@ -11,9 +11,9 @@ export function Section(props) {
                 <section>
                     <h3>{props.sectionInformation.secondHeader}</h3>
                     <ul>
-                        {props.sectionInformation.information.map(text => {
+                        {props.sectionInformation.information.map((text, index )=> {
                             return (
-                                <li>{text}</li>
+                                <li key={index}>{text}</li>
                             )
                         })}
                     </ul>
@@ -24,7 +24,7 @@ export function Section(props) {
                 </section>
             </figure>
             {props.sectionInformation.spacer &&
-                <img src={props.sectionInformation.spacer} alt="" />
+                <img src={props.sectionInformation.spacer} alt="Section spacer" className={style.sectionSpacer}/>
             }
         </div>
     )
