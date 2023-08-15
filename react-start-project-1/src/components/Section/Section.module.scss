@@ -1,0 +1,53 @@
+.sectionContainer {
+    width: 100%;
+
+    header {
+        h2 {
+            text-align: center;
+            padding: 1rem 0;
+            font-weight: 400;
+            font-size: 3rem;
+            color: white;
+        }
+    }
+
+    figure {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        img {
+            // width: 80%;
+            // margin: auto;
+            margin: 5rem auto;
+        }
+
+        section {
+            width: 80%;
+            margin: 0 auto;
+
+            h3 {
+                color: white;
+                margin: 40px auto;
+                font-size: 1.3rem;
+            }
+
+            ul {
+                list-style: square;
+
+                li {
+                    margin: 30px 40px;
+                    color: white;
+                }
+            }
+
+            p {
+                display: flex;
+                justify-content: end;
+                a {
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
