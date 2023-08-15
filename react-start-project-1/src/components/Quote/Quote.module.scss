@@ -1,0 +1,14 @@
+.quoteContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+    p {
+        font-family: 'Open Sans';
+        font-style: italic;
+        color: #8fa7bf;
+        font-size: 3rem;
+        text-align: center;
+        margin: 2rem 0;
+    }
+}
