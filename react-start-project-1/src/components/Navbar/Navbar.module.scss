@@ -1,0 +1,26 @@
+.navbarContainer {
+    width: 100vw;
+    background-color: #6B879B;
+    box-shadow: 0px 0px 10px black;
+
+    div {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: end;
+
+        li {
+            padding: 0.7rem 1rem;
+            cursor: pointer;
+            transition: 400ms;
+            color: white;
+            font-size: 1.2rem;
+        }
+        li:hover {
+            background-color: #7c97aa;
+        }
+    }
+}
