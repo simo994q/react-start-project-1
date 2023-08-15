@@ -3,6 +3,7 @@ import { Header } from './components/Header/Header'
 import { Navbar } from './components/Navbar/Navbar'
 import { Quote } from './components/Quote/Quote'
 import { Section } from './components/Section/Section'
+import { Footer } from './components/Footer/Footer'
 
 import co2Img from './images/Icon-CO2.png'
 import co2Bg from './images/Bg-Tile-Maroon.png'
@@ -100,6 +101,7 @@ function App() {
           <Section sectionInformation={section} key={index} />
         )
       })}
+      <Footer />
     </>
   )
 
