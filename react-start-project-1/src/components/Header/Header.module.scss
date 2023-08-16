@@ -21,7 +21,7 @@
 
         p {
             text-align: end;
-            font-size: 2vw;
+            font-size: 2.3vw;
             color: #8fa7bf;
             font-style: italic;
             margin: 1rem 2rem;
@@ -30,11 +30,19 @@
 }
 
 @media (max-width: 900px) {
-    .headerContainer div {
-        left: 0;
+    .headerContainer {
 
-        p {
-            text-align: left;
+        .headerLogo {
+            width: 60%;
+        }
+
+        div {
+            left: 0;
+            width: 90%;
+
+            p {
+                text-align: left;
+            }
         }
     }
 }

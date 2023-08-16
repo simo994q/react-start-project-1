@@ -23,7 +23,9 @@
             }
         }
 
-        img {}
+        img {
+            width: 100%;
+        }
     }
 
     .footerForm {
@@ -84,4 +86,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media (max-width: 950px) {
+    .footerContainer {
+        grid-template-columns: 1fr;
+
+        .footerAbout {
+            img {
+                width: 70%;
+            }
+        }
+
+        .footerForm {
+            gap: 0.5rem;
+        }
+    }
 }
