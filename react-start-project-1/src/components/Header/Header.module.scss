@@ -10,22 +10,31 @@
         position: absolute;
         left: 1rem;
         top: 1rem;
+        width: 70%;
     }
 
     div {
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 60%;
+        width: 70%;
 
         p {
             text-align: end;
-            font-size: 2rem;
+            font-size: 2vw;
             color: #8fa7bf;
             font-style: italic;
-            margin: 2rem;
+            margin: 1rem 2rem;
         }
     }
+}
 
+@media (max-width: 900px) {
+    .headerContainer div {
+        left: 0;
 
+        p {
+            text-align: left;
+        }
+    }
 }
