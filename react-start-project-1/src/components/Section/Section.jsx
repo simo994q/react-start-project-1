@@ -7,11 +7,14 @@ export function Section(props) {
                 <h2>{props.sectionInformation.header}</h2>
             </header>
             <figure>
-                <img src={props.sectionInformation.image} alt="" />
+                <div>
+                    <img src={props.sectionInformation.image} alt="" />
+
+                </div>
                 <section>
                     <h3>{props.sectionInformation.secondHeader}</h3>
                     <ul>
-                        {props.sectionInformation.information.map((text, index )=> {
+                        {props.sectionInformation.information.map((text, index) => {
                             return (
                                 <li key={index}>{text}</li>
                             )
@@ -24,7 +27,7 @@ export function Section(props) {
                 </section>
             </figure>
             {props.sectionInformation.spacer &&
-                <img src={props.sectionInformation.spacer} alt="Section spacer" className={style.sectionSpacer}/>
+                <img src={props.sectionInformation.spacer} alt="Section spacer" className={style.sectionSpacer} />
             }
         </div>
     )

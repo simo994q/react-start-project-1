@@ -16,10 +16,16 @@
         grid-template-columns: 1fr 1fr;
         padding-bottom: 2rem;
 
-        img {
-            // width: 80%;
-            // margin: auto;
-            margin: 5rem auto;
+        div {
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 80%;
+            }
         }
 
         section {
@@ -55,4 +61,22 @@
 
 .sectionSpacer {
     width: 100%;
+}
+
+@media (max-width: 800px) {
+    .sectionContainer {
+        figure {
+            grid-template-columns: 1fr;
+
+            div {
+
+                img {
+                    position: static;
+                    translate: 0 0;
+                    margin: auto;
+                    width: 40%;
+                }
+            }
+        }
+    }
 }
