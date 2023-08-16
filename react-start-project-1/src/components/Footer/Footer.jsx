@@ -7,25 +7,23 @@ export function Footer() {
     function checkValid(event) {
         event.preventDefault()
         let errorMessage = 'Du mangler at udfylde:\n'
+        const fields = [
+            {fieldName: event.target.personName.value, minLength: 1, fieldMessage: '\nNavn'},
+            {fieldName: event.target.personCity.value, minLength: 1, fieldMessage: '\nBy'},
+            {fieldName: event.target.personEmail.value, minLength: 5, fieldMessage: '\nEmail'},
+            {fieldName: event.target.personPhone.value, minLength: 7, fieldMessage: '\nTelefon'}
+        ]
 
-        if (event.target.personName.value.length == 0) {
-            errorMessage = errorMessage + '\nNavn'
-        }
-
-        if (event.target.personCity.value.length == 0) {
-            errorMessage = errorMessage + '\nBy'
-        }
-
-        if (event.target.personEmail.value.length == 0) {
-            errorMessage = errorMessage + '\nEmail'
-        }
-
-        if (event.target.personPhone.value.length == 0) {
-            errorMessage = errorMessage + '\nTelefon'
-        }
+        fields.map(item => {
+            if (item.fieldName.length <= item.minLength) {
+                errorMessage = errorMessage + item.fieldMessage
+            }
+        })
 
         if (event.target.personName.value.length == 0 || event.target.personCity.value.length == 0 || event.target.personEmail.value.length == 0 || event.target.personPhone.value.length == 0) {
             alert(errorMessage)
+        } else {
+            alert('👍')
         }
 
     };
