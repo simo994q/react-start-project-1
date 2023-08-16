@@ -28,9 +28,10 @@
         }
     }
 
-    .footerForm {
+    .footerForm form {
         display: flex;
         justify-content: space-between;
+        height: 100%;
 
         h3 {
             color: white;
@@ -82,7 +83,7 @@
 }
 
 .footerAbout,
-.footerForm {
+.footerForm form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -98,7 +99,7 @@
             }
         }
 
-        .footerForm {
+        .footerForm form {
             gap: 0.5rem;
         }
     }
